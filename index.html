@@ -61,19 +61,6 @@
     #projects button:hover {
       background-color: #45a049;
     }
-    /* Project Viewer Section */
-    #viewer {
-      margin: 20px;
-      text-align: center;
-    }
-    #projectFrame {
-      width: 100%;
-      max-width: 1000px;
-      height: 600px;
-      border: none;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
     /* Footer */
     footer {
       background: #eee;
@@ -98,40 +85,32 @@
     <ul>
       <li>
         Chess vs. AI (FREE and UNLIMITED)
-        <button onclick="loadProject('https://chessvs-ai.vercel.app/')">Launch</button>
+        <button onclick="openProject('https://chessvs-ai.vercel.app/')">Go</button>
       </li>
       <li>
         SpaceX Landing Simulator (FREE and UNLIMITED)
-        <button onclick="loadProject('https://rocket-kappa-seven.vercel.app/')">Launch</button>
+        <button onclick="openProject('https://rocket-kappa-seven.vercel.app/')">Go</button>
       </li>
       <li>
         Flight Simulator (FREE and UNLIMITED)
-        <button onclick="loadProject('https://flight-simulator-rho.vercel.app/')">Launch</button>
+        <button onclick="openProject('https://flight-simulator-rho.vercel.app/')">Go</button>
       </li>
       <li>
         Investing Predictions (FREE and UNLIMITED)
-        <button onclick="loadProject('https://richinvests.vercel.app/')">Launch</button>
+        <button onclick="openProject('https://richinvests.vercel.app/')">Go</button>
       </li>
       <li>
         AI Colorer (FREE and UNLIMITED)
-        <button onclick="loadProject('https://aicolorer.vercel.app/')">Launch</button>
+        <button onclick="openProject('https://aicolorer.vercel.app/')">Go</button>
       </li>
     </ul>
   </section>
   
-  <section id="viewer">
-    <iframe id="projectFrame" src="" title="Project Viewer">
-      Your browser does not support iframes.
-    </iframe>
-  </section>
-  
-  <footer>
-  </footer>
   
   <script>
-    // Function to load the selected project into the iframe
-    function loadProject(url) {
-      document.getElementById('projectFrame').src = url;
+    // Function to open the selected project in a new tab
+    function openProject(url) {
+      window.open(url, '_blank');
     }
   </script>
 </body>
