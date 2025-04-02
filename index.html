@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Albert Newton's Portfolio</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+    }
+    /* Intro Section */
+    #intro {
+      text-align: center;
+    }
+    /* Projects Section */
+    #projects {
+      background: #fff;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    #projects h2 {
+      text-align: center;
+    }
+    #projects ul {
+      list-style: none;
+      padding: 0 20px 20px 20px;
+    }
+    #projects li {
+      margin: 15px 0;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #projects button {
+      margin-left: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #projects button:hover {
+      background-color: #45a049;
+    }
+    /* Project Viewer Section */
+    #viewer {
+      margin: 20px;
+      text-align: center;
+    }
+    #projectFrame {
+      width: 100%;
+      max-width: 1000px;
+      height: 600px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    /* Footer */
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Albert Newton</h1>
+    <p>Innovator | Developer | Visionary</p>
+  </header>
+  
+  <section id="intro">
+    <p>Welcome to the official portfolio of Albert Newton. Explore a collection of innovative projects—all free and unlimited!</p>
+  </section>
+  
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        Chess vs. AI (FREE and UNLIMITED)
+        <button onclick="loadProject('https://chessvs-ai.vercel.app/')">Launch</button>
+      </li>
+      <li>
+        SpaceX Landing Simulator (FREE and UNLIMITED)
+        <button onclick="loadProject('https://rocket-kappa-seven.vercel.app/')">Launch</button>
+      </li>
+      <li>
+        Flight Simulator (FREE and UNLIMITED)
+        <button onclick="loadProject('https://flight-simulator-rho.vercel.app/')">Launch</button>
+      </li>
+      <li>
+        Investing Predictions (FREE and UNLIMITED)
+        <button onclick="loadProject('https://richinvests.vercel.app/')">Launch</button>
+      </li>
+      <li>
+        AI Colorer (FREE and UNLIMITED)
+        <button onclick="loadProject('https://aicolorer.vercel.app/')">Launch</button>
+      </li>
+    </ul>
+  </section>
+  
+  <section id="viewer">
+    <iframe id="projectFrame" src="" title="Project Viewer">
+      Your browser does not support iframes.
+    </iframe>
+  </section>
+  
+  <footer>
+  </footer>
+  
+  <script>
+    // Function to load the selected project into the iframe
+    function loadProject(url) {
+      document.getElementById('projectFrame').src = url;
+    }
+  </script>
+</body>
+</html>
